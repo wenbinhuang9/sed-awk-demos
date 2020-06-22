@@ -1,0 +1,11 @@
+#! /bin/zsh
+
+awk -F, '$4 "," $1' $* | sort
+| awk -F, '$1==laststate {
+    print "\t" $2
+}
+$1 != laststate {
+    laststate = $1;
+    print $1
+    print "\t" $2
+}' 

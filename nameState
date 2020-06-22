@@ -1,0 +1,6 @@
+
+## this can be executed by sed -f sed_demo list.txt > list_bak.txt
+##substituion command in sed. 
+s/ MA/Massuate/;
+s/ VA/Virginia/; 
+s/ CA/California/;
